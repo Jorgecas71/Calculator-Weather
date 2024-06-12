@@ -1,9 +1,18 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import Calculator from '../components/Calculator.vue';
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
+  <main id="init">
+    
+
+    <Calculator />
+
   </main>
 </template>
+
+<style lang="scss">
+#init {
+  color: crimson;
+}
+</style>
