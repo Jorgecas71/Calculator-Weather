@@ -12,7 +12,5 @@ import Calculator from '../components/Calculator.vue';
 </template>
 
 <style lang="scss">
-#init {
-  color: crimson;
-}
+
 </style>

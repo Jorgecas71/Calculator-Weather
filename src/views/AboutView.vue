@@ -1,7 +1,13 @@
+<script setup>
+import Divisas from '../components/Divisas.vue';
+</script>
+
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <main id="conver">
+
+      <Divisas />
+  </main>
+
 </template>
 
 <style>
