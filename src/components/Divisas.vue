@@ -71,7 +71,6 @@ export default {
 </template>
 
 <style lang="scss">
-
 $color_1: white;
 $color_2: black;
 $background-color_1: black;
