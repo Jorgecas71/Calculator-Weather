@@ -14,44 +14,39 @@ const weatherIcons = {
     "partly-cloudy-night": "wi-night-alt-cloudy"
 };
 
-// Función para actualizar el icono y la información meteorológica
+
 function updateWeather(weatherCondition) {
     const iconElement = document.getElementById('weather-icon');
     const infoElement = document.getElementById('weather-info');
 
-    // Verificar que el elemento iconElement exista
     if (iconElement) {
-        // Obtener el icono correspondiente a la condición meteorológica
         const iconClass = weatherIcons[weatherCondition] || "wi-na";
-
-        // Actualizar el icono y la información
         iconElement.className = `wi ${iconClass} weather-icon`;
+
     } else {
         console.error('Elemento weather-icon no encontrado');
     }
 
-    // Verificar que el elemento infoElement exista
-    if (infoElement) {
+     if (infoElement) {
         infoElement.textContent = weatherCondition.replace(/-/g, ' ');
     } else {
         console.error('Elemento weather-info no encontrado');
     }
 }
 
-// Ejemplo de actualización con una condición meteorológica
 updateWeather('rain');
 
 </script>
 
 <template>
     <div class="weather">
-  
-      <h2>Weather in {{ city }}</h2>
+        <input type="text" v-model="city" @keyup.enter="fetchWeather" placeholder="Enter city" />
+        <h2>Weather in {{ city }}</h2>
         <p v-if="weather">{{ weather.description }} - {{ temperature }}°C</p>
         <p v-else>Loading...</p>
     </div>
     <div class="weather-container">
-        <i id="weather-icon" class="wi wi-day-sunny weather-icon"></i>
+        <i id="weather-icon" class="wi wi-day-rain weather-icon"></i>
     </div>
 
 </template>
