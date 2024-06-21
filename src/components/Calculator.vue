@@ -27,6 +27,11 @@
 			<input type="reset" value="CE">
 			<input type="button" value="=" onclick="document.calculator.ans.value=eval(document.calculator.ans.value)">
 			<input type="button" value="/" onclick="document.calculator.ans.value+='/'" class="lila">
+			<br>
+			<input type="button" value="." onclick="document.calculator.ans.value+='.'" class="lila">
+			<input type="button" value="" onclick="document.calculator.ans.value+=''" class="lila">
+			<input type="button" value="" onclick="document.calculator.ans.value+=''" class="lila">
+			<input type="button" value="," onclick="document.calculator.ans.value+=','" class="lila">
 		</form>
 	</div>
 
@@ -44,7 +49,7 @@ $background-color_2: rgb(221, 165, 249);
 $background-color_3: rgb(86, 35, 114);
 
 #appBg {
-	height: 420px;
+	height: 520px;
 	width: 300px;
 	border: 1px solid black;
 	border-radius: 5px;

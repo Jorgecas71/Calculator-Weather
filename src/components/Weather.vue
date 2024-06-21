@@ -40,7 +40,7 @@ updateWeather('rain');
 
 <template>
     <div class="weather">
-        <input type="text" v-model="city" @keyup.enter="fetchWeather" placeholder="Enter city" />
+        <input type="text" v-model="city" @keyup.enter="fetchWeather" placeholder="Enter City" />
         <h2>Weather in {{ city }}</h2>
         <p v-if="weather">{{ weather.description }} - {{ temperature }}°C</p>
         <p v-else>Loading...</p>
